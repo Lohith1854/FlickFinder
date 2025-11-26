@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FlickFinder</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>FlickFinder</h1>
+      <p class="tag">Browse,search & save favorites</p>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search movies..." aria-label="Search movies" />
+      <button id="favViewBtn" title="View favorites">Favorites</button>
+      <button id="themeToggle" title="Toggle theme">Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Modal for movie details -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-wrap">
+      <button id="modalClose" class="modal-close" aria-label="Close details">✕</button>
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <small>Built with TMDb API • Personal project</small>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
